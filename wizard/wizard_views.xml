@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="wizard_button" model="ir.ui.view">
+            <field name="name">wizard.button.form</field>
+            <field name="model">wizard.button</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="test" default_value="context.get('default_test')" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button name="button1" string="Button 1" type="object" class="btn-primary"
+                                data-hotkey="q"/>
+                        <button name="button2" string="Button 2" type="object" class="btn-primary"
+                                data-hotkey="q"/>
+                        <button name="button3" string="Button 3" type="object" class="btn-primary"
+                                data-hotkey="q"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_wizard_button" model="ir.actions.act_window">
+            <field name="name">Wizard Button</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wizard.button</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="view_id" ref="wizard_button"/>
+        </record>
+    </data>
+</odoo>

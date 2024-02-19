@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="purchase_menuitem"
+              name="Open Wizard"
+              parent="purchase.menu_purchase_root"
+              action="action_wizard_button"/>
+</odoo>

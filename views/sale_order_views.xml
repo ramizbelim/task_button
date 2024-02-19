@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="sale_order_menuitem"
+              name="Open Wizard"
+              parent="sale.sale_menu_root"
+              action="burhansir_task.action_wizard_button"
+              sequence="60"/>
+</odoo>
