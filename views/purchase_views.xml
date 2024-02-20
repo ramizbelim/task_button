@@ -3,5 +3,5 @@
     <menuitem id="purchase_menuitem"
               name="Open Wizard"
               parent="purchase.menu_purchase_root"
-              action="action_wizard_button"/>
+              action="action_wizard_button_2"/>
 </odoo>

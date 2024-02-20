@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 class WizardButton(models.TransientModel):
     _name = 'wizard.button'
-
+    partner_new_id = fields.Many2one('res.partner',"Contact")
     test = fields.Boolean(string="Test")
 
     def button1(self):
@@ -13,8 +13,10 @@ class WizardButton(models.TransientModel):
     @api.model
     def default_get(self,vals):
         res = super(WizardButton, self).default_get(vals)
-        print("5555555",self.env.context)
-        print("5555555",self._context)
+        context=self.env.context
+
+        print("5555555",self.with_context(context))
+        print("5555555",self.env.user.context_get())
         return res
 
 
